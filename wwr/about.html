@@ -1,53 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | WWR</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=YourChosenFont&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/rafting.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | WWR</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header Styling */
+    header {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      padding: 10px 20px;
+      background: #f4f4f4;
+      border-bottom: 2px solid #ccc;
+    }
+
+    .logo {
+      max-width: 150px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    nav a {
+      color: #333;
+      font-weight: bold;
+      padding: 5px 15px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #0077cc;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 20px;
+      background: #eaf7ff;
+    }
+
+    .hero-img {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-top: 20px;
+    }
+
+    /* History Section */
+    section {
+      padding: 20px;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    section p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Adventure Section */
+    .adventure {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      padding: 20px 0;
+    }
+
+    figure {
+      text-align: center;
+    }
+
+    figcaption {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 5px;
+    }
+
+    /* Footer Styling */
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #333;
+      color: #fff;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    footer a {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    footer img {
+      width: 25px;
+      height: 25px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="images/logo.png" alt="WWR Logo" class="logo">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="trips.html">Trips</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    
-    <main>
-        <div class="hero">
-            <img src="images/hero.jpg" alt="Rafting Hero" class="hero-img">
-            <h1>White Water Rafting Adventures</h1>
-            <article>
-                <img src="images/happy-client.jpg" alt="Happy Client" class="client-img">
-                <p>Experience the thrill of a lifetime with our guided white water rafting trips!</p>
-            </article>
-        </div>
-        <section>
-            <h2>History</h2>
-            <p>Founded with a passion for adventure, WWR has been offering top-notch rafting experiences for over 20 years.</p>
-        </section>
-        <section>
-            <h2>Adventure Awaits You!</h2>
-            <img src="images/rafting1.jpg" alt="Rafting Image 1">
-            <img src="images/rafting2.jpg" alt="Rafting Image 2">
-            <img src="images/rafting3.jpg" alt="Rafting Image 3">
-            <img src="images/rafting4.jpg" alt="Rafting Image 4">
-            <img src="images/rafting5.jpg" alt="Rafting Image 5">
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2024 White Water Rafting Adventures | Designed by [Devi Nauth]</p>
-        <a href="https://facebook.com"><img src="images/facebook-icon.png" alt="Facebook"></a>
-        <a href="https://twitter.com"><img src="images/twitter-icon.png" alt="Twitter"></a>
-        <a href="https://instagram.com"><img src="images/instagram-icon.png" alt="Instagram"></a>
-    </footer>
-    
+  <header>
+    <img src="images/logo.png" alt="WWR Logo" class="logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="trips.html">Trips</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <img src="images/hero.jpg" alt="Rafting Hero" class="hero-img">
+      <h1>White Water Rafting Adventures</h1>
+      <article>
+        <img src="images/happy-client.jpg" alt="Happy Client" class="client-img">
+        <p>Experience the thrill of a lifetime with our guided white water rafting trips!</p>
+      </article>
+    </div>
+
+    <section class="history">
+      <h2>History</h2>
+      <p>Founded with a passion for adventure, WWR has been offering top-notch rafting experiences for over 20 years.</p>
+    </section>
+
+    <section class="adventure">
+      <h2>Adventure Awaits You!</h2>
+      <figure>
+        <img src="images/rafting1.jpg" alt="Rafting Image 1">
+        <figcaption>Los Dientes del Diablo</figcaption>
+      </figure>
+      <figure>
+        <img src="images/rafting2.jpg" alt="Rafting Image 2">
+        <figcaption>Big Mallard</figcaption>
+      </figure>
+      <figure>
+        <img src="images/rafting3.jpg" alt="Rafting Image 3">
+        <figcaption>Half Day Adventure</figcaption>
+      </figure>
+      <figure>
+        <img src="images/rafting4.jpg" alt="Rafting Image 4">
+        <figcaption>Rapid Rush</figcaption>
+      </figure>
+      <figure>
+        <img src="images/rafting5.jpg" alt="Rafting Image 5">
+        <figcaption>River Ride</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 White Water Rafting Adventures | Designed by Devi Nauth</p>
+    <div>
+      <a href="https://facebook.com">
+        <img src="images/facebook-icon.png" alt="Facebook">
+      </a>
+      <a href="https://twitter.com">
+        <img src="images/twitter-icon.png" alt="Twitter">
+      </a>
+      <a href="https://instagram.com">
+        <img src="images/instagram-icon.png" alt="Instagram">
+      </a>
+    </div>
+  </footer>
 </body>
 </html>
+
